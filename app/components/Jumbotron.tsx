@@ -14,9 +14,9 @@ const Jumbotron = () => {
         className="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-fixed"
         style={{ backgroundColor: "rgba(0, 0, 0, 0.6)" }}
       >
-        <div className="flex h-full items-center justify-center relative">
+        <div className="flex h-full relative">
           <div className="text-white absolute top-1/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20">
-            <h4 className="text-xl font-semibold">Subheading</h4>
+            <span className="text-sm font-normal">Subheading</span>
             <h2 className="mb-4 text-4xl font-semibold">Weebs never Die</h2>
           </div>
           <Image
@@ -26,6 +26,13 @@ const Jumbotron = () => {
             height={400}
             alt="sujuran"
           />
+          <div className="md:flex justify-between text-white absolute bottom-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 w-full">
+            <div className="text-sm font-normal md:mx-20 md:mb-5 md:w-1/4">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry.
+            </div>
+            <div className="font-semibold mx-20 md:mb-5">Weebs never Die</div>
+          </div>
         </div>
       </div>
     </div>
