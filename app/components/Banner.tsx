@@ -1,7 +1,9 @@
 interface BannerProps {
  children: React.ReactNode;
+ variant: Variant;
 }
 
-export const Banner = () => {
+type Variant = "L" | "R";
+export const Banner: React.FC<BannerProps> = () => {
  return <div></div>;
 };
