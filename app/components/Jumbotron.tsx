@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-const Jumbotron = () => {
+export const Jumbotron = () => {
  return (
   <div
    className="relative overflow-hidden bg-cover bg-no-repeat p-12 text-center"
@@ -37,5 +37,3 @@ const Jumbotron = () => {
   </div>
  );
 };
-
-export default Jumbotron;
