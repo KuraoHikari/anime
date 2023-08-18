@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { RiMessage2Fill, RiCheckboxCircleFill } from "react-icons/ri";
 
-import { AnimeCard, MegaTextTitle, Jumbotron, SearchBar, Banner } from "../components";
+import { AnimeCard, MegaTextTitle, Jumbotron, SearchBar, Banner, MainFeatures } from "../components";
 
 import DataAnimeExample from "../dataAnimeExample";
 
@@ -12,6 +12,32 @@ export default function Home() {
   "Internet without borders.",
   "Internet without borders.",
   "No specific time limits.",
+ ];
+ const mainFeatures = [
+  {
+   id: 1,
+   label: "CHAT DISCUSSION",
+   desc: "We use an application designed a testing gnose to keep away",
+   icon: RiMessage2Fill,
+  },
+  {
+   id: 2,
+   label: "CHAT DISCUSSION",
+   desc: "We use an application designed a testing gnose to keep away",
+   icon: RiMessage2Fill,
+  },
+  {
+   id: 3,
+   label: "CHAT DISCUSSION",
+   desc: "We use an application designed a testing gnose to keep away",
+   icon: RiMessage2Fill,
+  },
+  {
+   id: 4,
+   label: "CHAT DISCUSSION",
+   desc: "We use an application designed a testing gnose to keep away",
+   icon: RiMessage2Fill,
+  },
  ];
  return (
   <div className="bg-gray-800 h-full">
@@ -38,34 +64,9 @@ export default function Home() {
     <div className="py-4">
      <MegaTextTitle text1="WHAT" text2=" YOU" text3=" GOT " text4="HERE?" />
      <div className="mt-10 grid lg:grid-cols-4 md:grid-cols-2 gap-12 lg:gap-8 px-4 sm:px-6 lg:px-8 justify-center">
-      <div className=" text-center py-5 px-4 cursor-pointer  ease-in duration-200">
-       <div className="bg-color-secondary inline-block py-5 px-6">
-        <RiMessage2Fill size={64} color="rgb(229 231 235 / var(--tw-bg-opacity))" aria-hidden="true" />
-       </div>
-       <h3 className="text-xl font-bold py-4 text-gray-200">CHAT DISCUSSION</h3>
-       <p className="text-gray-500">We use an application designed a testing gnose to keep away</p>
-      </div>
-      <div className=" text-center py-5 px-4 cursor-pointer  ease-in duration-200">
-       <div className="bg-color-secondary inline-block py-5 px-6">
-        <RiMessage2Fill size={64} color="rgb(229 231 235 / var(--tw-bg-opacity))" aria-hidden="true" />
-       </div>
-       <h3 className="text-xl font-bold py-4 text-gray-200">CHAT DISCUSSION</h3>
-       <p className="text-gray-500">We use an application designed a testing gnose to keep away</p>
-      </div>
-      <div className="text-center py-5 px-4 cursor-pointer">
-       <div className="bg-color-secondary inline-block py-5 px-6">
-        <RiMessage2Fill size={64} color="rgb(229 231 235 / var(--tw-bg-opacity))" aria-hidden="true" />
-       </div>
-       <h3 className="text-xl font-bold py-4 text-gray-200">POST DISSCUSSION</h3>
-       <p className="text-gray-500">We use an application designed a testing gnose to keep away</p>
-      </div>
-      <div className=" text-center py-5 px-4 cursor-pointer  ease-in duration-200">
-       <div className="bg-color-secondary inline-block py-5 px-6">
-        <RiMessage2Fill size={64} color="rgb(229 231 235 / var(--tw-bg-opacity))" aria-hidden="true" />
-       </div>
-       <h3 className="text-xl font-bold py-4 text-gray-200">YOUR RATE IS MATTER</h3>
-       <p className="text-gray-500">We use an application designed a testing gnose to keep away</p>
-      </div>
+      {mainFeatures.map((feature) => (
+       <MainFeatures key={feature.id} label={feature.label} desc={feature.desc} icon={feature.icon} />
+      ))}
      </div>
     </div>
    </section>
@@ -102,14 +103,6 @@ export default function Home() {
     </div>
    </div>
 
-   <div className="transition-all ease-in-out duration-1000 flex justify-center mx-auto my-4">
-    <div slot="middle-left" className="lg:max-w-5xl md:max-w-3xl mx-5">
-     <div className="flex flex-row">
-      <div className="w-1/3 bg-gray-200 text-gray-500 p-5 flex justify-center items-center"></div>
-      <div className="w-2/3 bg-gray-500 p-5 text-gray-200 flex justify-center items-center h-48 text-3xl font-black uppercase"></div>
-     </div>
-    </div>
-   </div>
    <Banner variant="R" superText="Awesome ANIME DISCUSSION FLATFORM">
     <button className="bg-gray-500 drop-shadow-3xl text-white p-3 ">Subscribe Now</button>
    </Banner>

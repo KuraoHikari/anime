@@ -4,3 +4,4 @@ export * from "./SerachBar";
 export * from "./AnimeCard";
 export * from "./Banner";
 export * from "./FeatureSession";
+export * from "./MainFeatures";
