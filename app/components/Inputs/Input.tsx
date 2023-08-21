@@ -19,10 +19,10 @@ export const Input: React.FC<InputProps> = ({ label, id, type, required, registe
    <label
     className="
   block
-  text-sm
-  font-medium
-  leading-6
-  text-gray-900
+  text-md
+  font-bold
+  leading-8
+  text-gray-800
  "
     htmlFor={id}
    >
@@ -40,18 +40,19 @@ export const Input: React.FC<InputProps> = ({ label, id, type, required, registe
    form-input
    block
    w-full
-   rounded-md
    border-0
+   px-2
    py-1.5
    text-gray-900
+   bg-transparent
    shadow-sm
    ring-1
    ring-inset
-   ring-gray-300
+   ring-gray-600
    placeholder:text-gray-400
-   focus:ring-2
+   focus:ring-1
    focus:ring-inset
-   focus:ring-sky-600
+   focus:ring-gray-500
    sm:text-sm
    sm:leading-6
    `,

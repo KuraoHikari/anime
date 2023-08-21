@@ -40,7 +40,7 @@ export default function Home() {
   },
  ];
  return (
-  <div className="bg-gray-800 h-full">
+  <div className="bg-gray-800 ">
    <Jumbotron />
    <MegaTextTitle text1="THE" text2=" ANI" text3="ME SE" text4="ARCH" />
    <SearchBar />
