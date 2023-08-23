@@ -2,8 +2,8 @@ import { useMemo } from "react";
 import { usePathname } from "next/navigation";
 
 import { HiChat } from "react-icons/hi";
-import { HiArrowLeftOnRectangle, HiUsers } from "react-icons/hi2";
 import { SiMyanimelist } from "react-icons/si";
+import { IoMdChatboxes } from "react-icons/io";
 
 import useConversation from "./useConversation";
 
@@ -23,7 +23,7 @@ const useRoutes = () => {
    {
     label: "Chat",
     href: "/conversations",
-    icon: HiChat,
+    icon: IoMdChatboxes,
     active: pathname === "/conversations" || !!conversationId,
    },
   ],
